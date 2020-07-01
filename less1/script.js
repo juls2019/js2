@@ -2,42 +2,42 @@
 const products = {
     // ID товара
     536598: {
-        img: 'product-shark.jpg',
+        img: 'product.jpg',
         name: 'tovar1',
         price: 100,
         currency:'$',
         description: 'wertyui sdfghjk, xcvbnm dfghj'
     },
     536599: {
-        img: 'product-shark.jpg',
+        img: 'product.jpg',
         name: 'tovar2',
         price: 200,
         currency:'$',
         description: 'wertyui sdfghjk, xcvbnm dfghj'
     },
     536600: {
-        img: 'product-shark.jpg',
+        img: 'product.jpg',
         name: 'tovar3',
         price: 838800,
         currency:'$',
         description: 'wertyui sdfghjk, xcvbnm dfghj'
     },
     536601: {
-        img: 'product-shark.jpg',
+        img: 'product.jpg',
         name: 'tovar5',
         price: 10770,
         currency:'$',
         description: 'wertyui sdfghjk, xcvbnm dfghj'
     },
     536602: {
-        img: 'product-shark.jpg',
+        img: 'product.jpg',
         name: 'tovar83456',
         price: 100500,
         currency:'$',
         description: 'wertyui sdfghjk, xcvbnm dfghj'
     },
     56767602: {
-        img: 'product-shark.jpg',
+        img: 'product.jpg',
         name: 'tovar8345789',
         price: 10778500,
         currency:'$',
@@ -101,3 +101,15 @@ function showCart() {
     document.querySelector('.cart-list').classList.toggle('_active');
 }
 document.querySelector('.cart-button').addEventListener('click', showCart)
+
+class Dogs {
+    constructor(name='Shme', color='aaa', breed='qweqwe') {
+        this.name = name;
+        this.color = color;
+        this.breed = breed;
+    }
+}
+
+const dog1 = new Dogs();
+const dog2 = new Dogs('Shmonka', 'brown', 'labradoodle');
+console.log(dog1, dog2);
