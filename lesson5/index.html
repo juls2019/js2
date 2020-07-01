@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="wrapper" id="shme">
+        <div class="wrap-container">
+            <div class="top-menu">
+                <div class="_container _row top-menu__row">
+                    <div class="top-menu__logo-box">
+                        <img class="top-menu__logo" src="" alt="">
+                    </div>
+                    <div>
+                        <input type="text" v-model="searchLine">
+                        <button @click="FilterGoods">Search</button>
+                    </div>
+                    <div class="top-menu__button-box">
+                        <button type="button" class="cart-button" @click="openCart">Cart</button>
+                    </div>
+                    <div class="cart-list" v-show="isVisibleCart">
+                        <div class="_col-12" v-for="element in cart">
+                            <div class="products__img-box">
+                                <img :src="'img/'+element.img" :alt="element.name" class="products__img">
+                            </div>
+                            <div class="products__title">{{ element.name }}</div>
+                            <div class="products__price">{{ element.price + element.currency }}</div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <main class="main">
+                <div class="_container _row products-list">
+                    <div class="_col-12 _col-md-6 _col-lg-3" v-for="element in products">
+                        <div class="products__img-box">
+                            <img :src="'img/'+element.img" :alt="element.name" class="products__img">
+                        </div>
+                        <div class="products__title">{{ element.name }}</div>
+                        <div class="products__price">{{ element.price + element.currency }}</div>
+                        <button class="button" @click="addToCart">Buy</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <footer class="footer">
+            <div class="_container _row">
+                <div class="_col-12">footer</div>
+            </div>
+
+        </footer>
+
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
